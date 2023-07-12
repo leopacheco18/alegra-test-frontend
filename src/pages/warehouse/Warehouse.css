@@ -1,0 +1,17 @@
+:where(.css-dev-only-do-not-override-14wwjjs).ant-tabs .ant-tabs-ink-bar {
+  background: #00b19c;
+}
+
+:where(.css-dev-only-do-not-override-14wwjjs).ant-tabs
+  .ant-tabs-tab.ant-tabs-tab-active
+  .ant-tabs-tab-btn,
+:where(.css-dev-only-do-not-override-14wwjjs).ant-tabs .ant-tabs-tab:hover {
+  color: #00b19c;
+}
+
+
+@media only screen and (max-width: 992px) {
+  .ant-tabs, .ant-tabs-content, .ant-tabs-tabpane{
+    height: 100%;
+  }
+}

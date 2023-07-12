@@ -1,0 +1,32 @@
+.btn-container-right {
+  gap: 10px;
+  justify-content: end;
+}
+
+.btn-container-left {
+  gap: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+  .orders-header-container {
+    flex-wrap: wrap;
+  }
+
+  .btn-container-left > .ant-select {
+    width: 100%;
+  }
+  .btn-container-left {
+    margin-bottom: 20px;
+  }
+
+  .btn-container-right {
+    flex-wrap: wrap;
+  }
+  .btn-container-right > button {
+    width: 100%;
+  }
+
+  .table-container {
+    height: calc(100% - 160px);
+  }
+}

@@ -1,0 +1,37 @@
+version: 0.2
+
+env:
+  variables:
+    REPOSITORY_URI: ""
+    APPLICATION_NAME: ""
+    FOLDER_NAME_APP: ""
+
+phases:
+  pre_build:
+    commands:
+      - echo REPOSITORY_URI $REPOSITORY_URI
+      - echo APPLICATION_NAME $APPLICATION_NAME
+      - echo FOLDER_NAME_APP
+      # Install necessary dependencies
+      - npm ci
+
+  build:
+    commands:
+      - cd $FOLDER_NAME_APP
+      - echo "Current working directory: $PWD"
+      # Build the Docker image
+      - docker build -t $APPLICATION_NAME .
+      # Configure Docker credentials for ECR
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin $REPOSITORY_URI
+      # Tag the image in the required ECR format
+      - docker tag $APPLICATION_NAME $REPOSITORY_URI/$APPLICATION_NAME
+
+  post_build:
+    commands:
+      # Push the image to ECR
+      - docker push $REPOSITORY_URI/$APPLICATION_NAME
+      - printf '[{"name":"%s", "imageUri":"%s"}]' $APPLICATION_NAME $REPOSITORY_URI/$APPLICATION_NAME > imageDefinition.json
+
+artifacts:
+  files:
+    - imageDefinition.json
