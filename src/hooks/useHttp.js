@@ -8,11 +8,11 @@ const headers = {
 const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const requestPost = async (port = '8000', path, data) => {
+  const requestPost = async ( path, data) => {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        backendUrl + port +'/' + path,
+        backendUrl  + path,
         data,
         { headers: headers }
       );
@@ -25,7 +25,7 @@ const useHttp = () => {
   };
 
   
-  const requestGet = async (port = '8000',path, customHeaders) => {
+  const requestGet = async (path, customHeaders) => {
     try {
       setIsLoading(true);
       let headersToSend = {
@@ -33,7 +33,7 @@ const useHttp = () => {
         ...customHeaders
       }
       const response = await axios.get(
-        backendUrl + port +'/' + path,
+        backendUrl + path,
         { headers: headersToSend }
       );
       setIsLoading(false);

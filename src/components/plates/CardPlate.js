@@ -9,7 +9,7 @@ export const CardPlate = ({ image, name, description, ingredients }) => {
       <div className="d-flex  h-100 w-100">
         <div className="card-plate-img-container h-100">
           <img
-            src={`${backendUrl}8001${image}`}
+            src={`${backendUrl}${image}`}
             className="card-plate-img"
             alt="plate"
           />

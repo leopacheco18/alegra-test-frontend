@@ -49,7 +49,7 @@ const Tab2 = () => {
 
   const getPurchases = async (page = 1) => {
     let url = `api/purchases?page=${page}`;
-    const response = await requestGet("8002", url);
+    const response = await requestGet(url);
 
     setTableParams({
       ...tableParams,

@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./App.css";
 import NotFound from "./pages/notFound/NotFound";
-import { AppstoreOutlined, BookOutlined, CoffeeOutlined }  from "@ant-design/icons";
+import { AppstoreOutlined, BarChartOutlined, BookOutlined, CoffeeOutlined }  from "@ant-design/icons";
 import { Button, Layout, Menu } from "antd";
 import { Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
@@ -10,6 +10,7 @@ import logo from "./assets/img/logo.png";
 import Orders from "./pages/orders/Orders";
 import Warehouse from "./pages/warehouse/Warehouse";
 import Plates from "./pages/plates/Plates";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
       label: "Platos",
       key: "/plates",
       icon: <CoffeeOutlined />,
+    },
+    {
+      label: "Dashboard",
+      key: "/dashboard",
+      icon: <BarChartOutlined />,
     },
   ];
 
@@ -93,6 +99,7 @@ function App() {
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/warehouse" element={<Warehouse />} />
                 <Route path="/plates" element={<Plates />} />
+                <Route path="/dashboard" element={<Dashboard />} />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>

@@ -80,7 +80,7 @@ const Orders = () => {
     if (status && status !== "all") {
       url += `&status=${status}`;
     }
-    const response = await requestGet("8000", url);
+    const response = await requestGet(url);
 
     setTableParams({
       ...tableParams,
@@ -114,7 +114,7 @@ const Orders = () => {
     if(open){
         setOpen(false)
     }
-    await requestPost("8000", "api/orders", data);
+    await requestPost("api/orders", data);
     getOrders(tableParams.pagination.current, status);
   };
   const handleChange = (value) => {

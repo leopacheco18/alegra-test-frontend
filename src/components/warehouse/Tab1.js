@@ -41,7 +41,7 @@ const Tab1 = () => {
   
   const getIngredients = async (page = 1) => {
     let url = `api/ingredients?page=${page}`;
-    const response = await requestGet("8002", url);
+    const response = await requestGet(url);
 
     setIngredients(
       response.map((item) => ({ ...item, key: item.id_ingredient }))

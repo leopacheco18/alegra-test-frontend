@@ -1,0 +1,32 @@
+.card-dashboard {
+    width: calc(100% / 2 - 10px);
+    height: calc((100vh - 124px) / 2);
+    text-align: center;
+  }
+  
+  .card-dashboard > .ant-card-body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: calc(100% - 56px);
+  }
+  
+  .container-gap {
+    gap: 15px;
+  }
+  
+  
+  @media only screen and (max-width: 992px) {
+    .card-dashboard {
+      width: calc(100%);
+      height: 50vh;
+    }
+  
+    .container-gap {
+      padding: 20px;
+      max-height: calc(100vh - 64px);
+      overflow: auto;
+    }
+  
+  }
+  

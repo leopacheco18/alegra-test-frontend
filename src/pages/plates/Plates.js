@@ -13,7 +13,7 @@ const Plates = () => {
   }, []);
 
   const getPlates = async () => {
-    const plates = await requestGet("8001", "api/plates");
+    const plates = await requestGet("api/plates");
     console.log(plates);
     setPlates(plates);
   };
