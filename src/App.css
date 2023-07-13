@@ -44,12 +44,12 @@
   font-weight: bold;
   z-index: 2;
 }
-:where(.css-dev-only-do-not-override-14wwjjs).ant-btn-primary:not(
+.ant-btn-primary:not(
     :disabled
   ):not(.ant-btn-disabled):active {
   background-color: #00b19c !important;
 }
-:where(.css-dev-only-do-not-override-14wwjjs).ant-btn-primary:not(
+.ant-btn-primary:not(
     :disabled
   ):not(.ant-btn-disabled):hover {
   background-color: #00b19c !important;
@@ -148,55 +148,55 @@
   flex-wrap: wrap;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+.ant-menu-light
   .ant-menu-item-selected,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+.ant-menu-light
   > .ant-menu
   .ant-menu-item-selected {
   background-color: rgba(0, 177, 156, 0.3) !important;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+.ant-menu-light
   .ant-menu-item-selected,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-menu-light
+.ant-menu-light
   > .ant-menu
   .ant-menu-item-selected {
   color: black !important;
   font-weight: bold !important;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-btn-primary,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-layout
+.ant-btn-primary,
+.ant-layout
   .ant-layout-sider-trigger {
   background-color: #00b19c !important;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-select:not(
+.ant-select:not(
     .ant-select-disabled
   ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
   .ant-select-selector,
-.ant-select-focused:where(.css-dev-only-do-not-override-14wwjjs).ant-select:not(
+.ant-select-focused.ant-select:not(
     .ant-select-disabled
   ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
   .ant-select-selector,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-pagination
+.ant-pagination
   .ant-pagination-item-active,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-pagination
+.ant-pagination
   .ant-pagination-item-active:hover {
   border-color: #00b19c !important;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-btn-default:not(
+.ant-btn-default:not(
     :disabled
   ):not(.ant-btn-disabled):hover,
-:where(.css-dev-only-do-not-override-14wwjjs).ant-btn-default:not(
+.ant-btn-default:not(
     :disabled
   ):not(.ant-btn-disabled):active {
   color: #00b19c !important;
   border-color: #00b19c !important;
 }
 
-:where(.css-dev-only-do-not-override-14wwjjs).ant-pagination
+.ant-pagination
   .ant-pagination-item-active
   a {
   color: #00b19c !important;
