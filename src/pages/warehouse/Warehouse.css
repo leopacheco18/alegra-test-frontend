@@ -1,12 +1,12 @@
 :where(.css-dev-only-do-not-override-14wwjjs).ant-tabs .ant-tabs-ink-bar {
-  background: #00b19c;
+  background: #00b19c !important;
 }
 
 :where(.css-dev-only-do-not-override-14wwjjs).ant-tabs
   .ant-tabs-tab.ant-tabs-tab-active
   .ant-tabs-tab-btn,
 :where(.css-dev-only-do-not-override-14wwjjs).ant-tabs .ant-tabs-tab:hover {
-  color: #00b19c;
+  color: #00b19c !important;
 }
 
 
